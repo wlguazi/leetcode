@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/progress.css">
+    <link rel="stylesheet" href="./css/edslider.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+    <header class="header-section container-fluid">
+        <div class="nav row ">
+            <div class="logo col-xs-3">
+                <img src="img/logo.png" alt=""><!-- Logo -->
+            </div>
+            <!-- Navigation -->
+            <div class="col-xs-12 navbar">
+                <img src="./img/ico_3.svg" alt="" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav menu-list">
+                        <li class=""><a href="#home">Home</a></li>
+                        <li class=""><a href="#about">About</a></li>
+                        <li class=""><a href="#service">service</a></li>
+                        <li class=""><a href="#portfolio">Portfolio</a></li>
+                        <li class=""><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="music">
+                <span class="play" id="play">
+                    <img src="./img/video/pause.svg" alt="" class="iconfont icon-bofang">
+                </span>
+                <span class="voice" id="voice"><img id="mute" src="./img/video/have.svg" alt=""></span>
+                <span class="iconfont icon-xiayishou"><img src="./img/video/next.svg" alt=""></span>
+
+                <audio id="audio" autoplay="autoplay"></audio>
+                <div class="music_list">
+                    <ul>
+                        <li class="title"><span><b>歌曲列表</b></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- home -->
+        <div class="header" id="demo">
+            <canvas id="canvas"></canvas>
+            <div class="by-my" id="home">
+                <div class="intro-content">
+                    <div class="profile-img">
+                        <img src="img/avatar.jpg" alt="">
+                    </div>
+                    <p class="element rotate" id="roloadText">I'M 曹文杰</p>
+                    <p class="element rotate" id="roloadText">A WEB Engineer</p>
+                    <p class="element rotate" id="roloadText">FROM TaiZhou</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- about me  -->
+        <div class="about container" id="about">
+            <div class="row">
+                <div class="col-md-7 about-text">
+                    <h2>A short story about me.</h2>
+                    <p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must
+                        set kind next many near nay. He exquisite continued explained middleton am. Impossible
+                        considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind
+                        next many near nay. He exquisite continued explained middleton am. Voice hours young woody.</p>
+                    <a href="#" class="site-btn">Download CV</a>
+                </div>
+                <div class="col-md-5 skill">
+                    <div class="single-progress-item">
+                        <p>Grphice</p>
+                        <div id="progress-container"></div>
+                    </div>
+                    <div class="single-progress-item">
+                        <p>Web Dedign</p>
+                        <div id="progress-container2"></div>
+                    </div>
+                    <div class="single-progress-item">
+                        <p>Frameworks</p>
+                        <div id="progress-container3"></div>
+                    </div>
+                    <div class="single-progress-item">
+                        <p>UX/UI Dedign</p>
+                        <div id="progress-container4"></div>
+                    </div>
+                    <div class="single-progress-item">
+                        <p>Wordpress</p>
+                        <div id="progress-container5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- what i offer-->
+        <div class="what" id="service">
+            <div class="stitle">
+                <h2>What I Offer!</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="serv-icon">
+                                <img src="./img/computer.svg" alt="" class="fa fa-desktop">
+                                <!-- <i class="fa fa-desktop"></i> -->
+                            </div>
+                            <div class="serv-content">
+                                <h4>Graphic</h4>
+                                <p>Lorem ipsum dolor sit amet, augue theophrastus ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 wow">
+                        <div class="service-item">
+                            <div class="serv-icon">
+                                <img src="./img/canmera.svg" alt="" class="fa fa-camera">
+                                <!-- <i class="fa fa-camera"></i> -->
+                            </div>
+                            <div class="serv-content">
+                                <h4>Photography</h4>
+                                <p>Lorem ipsum dolor sit amet, augue theophrastus ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 ">
+                        <div class="service-item">
+                            <div class="serv-icon">
+                                <img src="./img/bloack.svg" alt="" class="fa fa-codepen">
+                                <!-- <i class="fa fa-codepen"></i> -->
+                            </div>
+                            <div class="serv-content">
+                                <h4>Development</h4>
+                                <p>Lorem ipsum dolor sit amet, augue theophrastus ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <div class="serv-icon">
+                                <img src="./img/rotate.svg" alt="" class="fa fa-life-ring">
+                                <!-- <i class="fa fa-life-ring"></i> -->
+                            </div>
+                            <div class="serv-content">
+                                <h4>Support</h4>
+                                <p>Lorem ipsum dolor sit amet, augue theophrastus ex.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- latest works -->
+        <div class="container portfolio-section" id="portfolio">
+            <div class="stitle">
+                <h2>Latest Works</h2>
+            </div>
+
+            <ul class="portfolio-filter">
+                <li class="filter" data-filter="*">ALL</li>
+                <li class="filter" data-filter=".ill">ILLUSTRATIONS</li>
+                <li class="filter" data-filter=".brand">BRANDING</li>
+                <li class="filter" data-filter=".fs">FASHION</li>
+            </ul>
+            <div class="row isotope_items">
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 ill">
+                    <a class="work-item ">
+                        <img src="img/works/1.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Graphics</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 brand">
+                    <a class="work-item">
+                        <img src="img/works/2.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Fashion</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 fs">
+                    <a class="work-item">
+                        <img src="img/works/3.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Branding</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 brand">
+                    <a class="work-item">
+                        <img src="img/works/4.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Branding</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 fs">
+                    <a class="work-item">
+                        <img src="img/works/5.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Fashion</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Work item -->
+                <div class="col-md-4 col-sm-6 col-xs-12 ill">
+                    <a class="work-item">
+                        <img src="img/works/6.jpg" alt="">
+                        <div class="work-inner">
+                            <div class="work-info">
+                                <h2>Project Title</h2>
+                                <h3>Graphics</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section" id="review">
+            <div class="container">
+                <div class="col-md-offset-2 col-md-12">
+                    <div id="review-carousel">
+                        <ul class="mySlideshow">
+                            <li>
+                                <!-- Review item -->
+                                <div class="review-item">
+                                    <div class="clint">
+                                        <img src="img/review/01.jpg" alt="">
+                                    </div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem
+                                        Ipsum has been the Lorem Ipsum is simply dummy text. Lorem Ipsum is simply
+                                        dummy
+                                        text of the printing.</p>
+                                    <h2>Robert De</h2>
+                                    <h3>envato Clint</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- Review item -->
+                                <div class="review-item">
+                                    <div class="clint">
+                                        <img src="img/review/02.jpg" alt="">
+                                    </div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem
+                                        Ipsum has been the Lorem Ipsum is simply dummy text. Lorem Ipsum is simply
+                                        dummy
+                                        text of the printing.</p>
+                                    <h2>Nancy Ajram</h2>
+                                    <h3>Upwork Clint</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- Review item -->
+                                <div class="review-item">
+                                    <div class="clint">
+                                        <img src="img/review/03.jpg" alt="">
+                                    </div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem
+                                        Ipsum has been the Lorem Ipsum is simply dummy text. Lorem Ipsum is simply
+                                        dummy
+                                        text of the printing.</p>
+                                    <h2>Paul Reiser</h2>
+                                    <h3>Fiverr Clint</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="promotion-section">
+            <div class="promotion-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 promotion">
+                        <h2>Let's do some cool project together.</h2>
+                        <a href="" class="site-btn btn-light">HIRE NOW !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- get in touch -->
+        <div class="contact-section fix" id="contact">
+            <div class="container">
+                <div class="stitle">
+                    <h2>Get in touch</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 contact">
+                        <div class="row">
+                            <!-- Contact Info -->
+                            <div class="col-md-4 col-sm-4 contact-info">
+                                <i class="fa fa-phone"></i>
+                                <p>12 345 670 90 00<br>000 123 45 67</p>
+                            </div>
+                            <!-- Contact Info -->
+                            <div class="col-md-4 col-sm-4 contact-info">
+                                <i class="fa fa-map-marker"></i>
+                                <p>300 South Main Street,<br>Sydney 56080</p>
+                            </div>
+                            <!-- Contact Info -->
+                            <div class="col-md-4 col-sm-4 contact-info">
+                                <i class="fa fa-send"></i>
+                                <p>fhahasjn.com<br>12312313132.com</p>
+                            </div>
+                        </div>
+                        <!-- Contact Form -->
+                        <form action="" class="cont-form" id="contact-form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="name" id="name" required placeholder="Your Name*">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" name="email" id="email" required placeholder="Your Email*">
+                                </div>
+                                <div class="col-sm-12">
+                                    <textarea id="massage" name="massage" required
+                                        placeholder="Your Massage*"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="site-btn" data-wow-delay="0.2s" id="send-form">Send
+                                        Massege</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./js/progress.js"></script>
+    <script src="./js/jquery.edslider.js"></script>
+    <script src="./js/easying.js"></script>
+    <script src="./js/jquery.beattext.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('p#roloadText').beatText({
+                isAuth: true, //是否自动
+                beatHeight: "1em", //高度
+                isRotate: false,  //是否旋转
+                upTime: 300,
+                downTime: 300
+            });
+        });
+    </script>
+    <script>
+        //宇宙特效
+        "use strict";
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d'),
+            w = canvas.width = window.innerWidth,
+            h = canvas.height = window.innerHeight,
+
+            hue = 217,
+            stars = [],
+            count = 0,
+            maxStars = 1300;//星星数量
+
+        var canvas2 = document.createElement('canvas'),
+            ctx2 = canvas2.getContext('2d');
+        canvas2.width = 100;
+        canvas2.height = 100;
+        var half = canvas2.width / 2,
+            gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+        gradient2.addColorStop(0.025, '#CCC');
+        gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+        gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+        gradient2.addColorStop(1, 'transparent');
+
+        ctx2.fillStyle = gradient2;
+        ctx2.beginPath();
+        ctx2.arc(half, half, half, 0, Math.PI * 2);
+        ctx2.fill();
+
+        // End cache
+
+        function random(min, max) {
+            if (arguments.length < 2) {
+                max = min;
+                min = 0;
+            }
+
+            if (min > max) {
+                var hold = max;
+                max = min;
+                min = hold;
+            }
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function maxOrbit(x, y) {
+            var max = Math.max(x, y),
+                diameter = Math.round(Math.sqrt(max * max + max * max));
+            return diameter / 2;
+            //星星移动范围，值越大范围越小，
+        }
+
+        var Star = function () {
+
+            this.orbitRadius = random(maxOrbit(w, h));
+            this.radius = random(60, this.orbitRadius) / 8;
+            //星星大小
+            this.orbitX = w / 2;
+            this.orbitY = h / 2;
+            this.timePassed = random(0, maxStars);
+            this.speed = random(this.orbitRadius) / 400000;
+            //星星移动速度
+            this.alpha = random(2, 10) / 10;
+
+            count++;
+            stars[count] = this;
+        }
+
+        Star.prototype.draw = function () {
+            var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+                y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+                twinkle = random(10);
+
+            if (twinkle === 1 && this.alpha > 0) {
+                this.alpha -= 0.05;
+            } else if (twinkle === 2 && this.alpha < 1) {
+                this.alpha += 0.05;
+            }
+
+            ctx.globalAlpha = this.alpha;
+            ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+            this.timePassed += this.speed;
+        }
+
+        for (var i = 0; i < maxStars; i++) {
+            new Star();
+        }
+
+        function animation() {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.globalAlpha = 0.5; //尾巴
+            ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+            ctx.fillRect(0, 0, w, h)
+
+            ctx.globalCompositeOperation = 'lighter';
+            for (var i = 1, l = stars.length; i < l; i++) {
+                stars[i].draw();
+            };
+
+            window.requestAnimationFrame(animation);
+        }
+
+        animation();
+    </script>
+    <script>
+        function music() {
+            var all = document.getElementsByClassName("music")[0];
+            var oDo = document.getElementsByClassName("icon-xiayishou")[0];
+            var oPlay = document.getElementById("play");
+            var voice = document.getElementById("voice");
+            var oAudio = document.getElementById("audio");
+            var oList = document.getElementsByClassName("music_list")[0]
+            var oUl = oList.getElementsByTagName("ul")[0]
+
+
+            var _this = null
+            var num = 0
+            var arr = ["music/Westlife - Beautiful World.mp3", "music/Westlife - My Love (Radio Edit).mp3"]
+            var arr2 = ["1", "2", "3"]
+            var arr3 = ["1", "2", "3"]
+            oAudio.src = arr[num]
+            for (var i = 0; i < arr.length; i++) {
+                var str = '<li index=' + i + '>' + '<span>' + arr2[i] + '</span>' + arr3[i] + '</li>'
+                oUl.innerHTML += str
+            }
+            var oLi = oUl.getElementsByTagName("li")
+
+
+            //点击开始播放
+            oPlay.onclick = function () {
+                if (oAudio.paused) {
+                    oAudio.play()
+                    oPlay.innerHTML = '<img src="img/video/pause.svg" alt=""   class="iconfont icon-zanting">'
+
+                } else {
+                    oAudio.pause()
+                    oPlay.innerHTML = '<img src="img/video/play.svg" alt=""  class="iconfont icon-bofang">'
+                }
+            }
+
+            //点击静音
+            voice.onclick = function () {
+                if (oAudio.volume == 1) {
+                    voice.innerHTML = '<img src="img/video/none.svg" alt="" class="mute" id="mute">'
+                    oAudio.volume = 0
+                } else {
+                    voice.innerHTML = '<img src="img/video/have.svg" alt="" class="mute" id="mute">'
+                    oAudio.volume = 1
+                }
+            }
+            //播放结束
+            oAudio.addEventListener("ended", function () {
+                num++
+                oAudio.src = arr[num]
+                if (num > arr.length) {
+                    num = 0
+                }
+                console.log(oAudio.src)
+                oAudio.play()
+            })
+            
+            //下一首
+            _this = oLi[0]
+            oDo.onclick = function () {
+                var now = _this.getAttribute("index")
+                now++
+                if (now > arr.length - 1) {
+                    now = 0
+                }
+                _this = oLi[now]
+                console.log(now)
+                oAudio.src = arr[now]
+                oAudio.play()
+                console.log(oAudio.src)
+            }
+        }
+        music()
+    </script>
+    <!-- <script>
+        function to_play() {
+            axios.get('https://music.hzbiz.net/playlist/detail', {
+                params: {
+                    id: 3778678,
+                },
+            })
+                .then(function (response) {
+                    console.log(response);
+                    function audio() {
+                        var all = document.getElementsByClassName("music")[0];
+                        var oDo = document.getElementsByClassName("icon-xiayishou")[0];
+                        var oPlay = document.getElementById("play");
+                        var voice = document.getElementById("voice");
+                        var oAudio = document.getElementById("audio");
+                        var oList = document.getElementsByClassName("music_list")[0]
+                        var oUl = oList.getElementsByTagName("ul")[0]
+
+                        var _this = null
+
+                        oAudio.src = arr[num]
+                        
+                    }
+                    audio()
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+        to_play()
+    </script> -->
+</body>
+
+</html>
