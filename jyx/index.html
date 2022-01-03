@@ -142,7 +142,7 @@
                 </div>
             </li>
 
-            <!-- Page 4 Gallery Three -->
+            <!-- Page 4 Gallery four -->
             <li>
                 <div class="cd-full-width">
                     <div class="container-fluid js-tm-page-content" data-page-no="4" data-page-type="gallery">
@@ -391,6 +391,12 @@
                 gallery: { enabled: true }
             });
 
+            $('.gallery-four').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: { enabled: true }
+            });
+
             /* Collapse menu after click 
             -----------------------------------------*/
             $('#tmNavbar a').click(function () {
@@ -430,7 +436,7 @@
             $.each(data.data, function (i, item) {
                 data1 += '<div class="grid-item">' +
                     '<figure class="effect-bubba">' +
-                    '<img src="' + item + '" alt="Image" class="img-fluid tm-img"/>' +
+                    '<img data-src="' + item + '" alt="Image" class="img-fluid tm-img lazyload"/>' +
                     '<figcaption>' +
                     '<a href="' + item + '">' + '</a>' +
                     '<figcaption>' +
@@ -442,7 +448,7 @@
             $.each(data.data2, function (i, item) {
                 data2 += '<div class="grid-item">' +
                     '<figure class="effect-bubba">' +
-                    '<img src="' + item + '" alt="Image" class="img-fluid tm-img"/>' +
+                    '<img data-src="' + item + '" alt="Image" class="img-fluid tm-img lazyload"/>' +
                     '<figcaption>' +
                     '<a href="' + item + '">' + '</a>' +
                     '<figcaption>' +
@@ -454,7 +460,7 @@
             $.each(data.data3, function (i, item) {
                 data3 += '<div class="grid-item">' +
                     '<figure class="effect-bubba">' +
-                    '<img src="' + item + '" alt="Image" class="img-fluid tm-img"/>' +
+                    '<img data-src="' + item + '" alt="Image" class="img-fluid tm-img lazyload"/>' +
                     '<figcaption>' +
                     '<a href="' + item + '">' + '</a>' +
                     '<figcaption>' +
@@ -466,7 +472,7 @@
             $.each(data.data4, function (i, item) {
                 data4 += '<div class="grid-item">' +
                     '<figure class="effect-bubba">' +
-                    '<img src="' + item + '" alt="Image" class="img-fluid tm-img"/>' +
+                    '<img data-src="' + item + '" alt="Image" class="img-fluid tm-img lazyload"/>' +
                     '<figcaption>' +
                     '<a href="' + item + '">' + '</a>' +
                     '<figcaption>' +
@@ -477,6 +483,35 @@
 
         }
     </script>
+
+<script>
+	// var imgs = document.querySelectorAll('img');
+	//var imgs = document.querySelectorAll('lazyload');
+	var imgs = document.getElementsByClassName('lazyload');
+
+	//offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+	function getTop(e) {
+		var T = e.offsetTop;
+		while (e = e.offsetParent) {
+			T += e.offsetTop;
+		}
+		return T;
+	}
+
+	function lazyLoad(imgs) {
+		var H = document.documentElement.clientHeight;//获取可视区域高度
+		var S = document.documentElement.scrollTop || document.body.scrollTop;
+		for (var i = 0; i < imgs.length; i++) {
+			if (H + S > getTop(imgs[i])) {
+				imgs[i].src = imgs[i].getAttribute('data-src');
+			}
+		}
+	}
+
+	window.onload = window.onscroll = function () { //onscroll()在滚动条滚动的时候触发
+		lazyLoad(imgs);
+	}
+</script>
     <script type="text/javascript" src="./data.json?cb=dataJson"></script>
 
 </body>
